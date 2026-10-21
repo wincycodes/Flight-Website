@@ -1,0 +1,1556 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+  background-color: white;
+}
+
+
+
+{/*Navbar*/}
+
+.navbar {
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.navbar img{
+  width: 120px;
+  float: left;
+  margin-left: 30px;
+  margin-top: -18px;
+}
+.nav{
+  align-items: center;
+  margin-right: 150px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.nav a{
+  color: rgb(49, 102, 180);
+  margin-right: 40px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.nav a:hover{
+  color: rgb(78, 132, 213);
+}
+
+{/*Home Page*/}
+
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+.home-content,.flight-search {
+    position: relative;
+    z-index: 1;
+}
+.home-content{
+  text-align: left;
+  margin-left: 80px;
+}
+.home-content h1{
+  font-family: 'Dancing Script', cursive;
+  margin-top: 170px;
+  color: rgb(49, 102, 180);
+  font-size: 80px;
+}
+.home-content p{
+  margin-left: 9px;
+  font-size: 18px;
+  word-spacing: 7px;
+  letter-spacing: 2px;
+  margin-top: 7px;
+  color: rgb(116, 154, 205);
+
+}
+.home-content button{
+  margin-top: 30px;
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+.home-content button:hover{
+  cursor: pointer;
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+.flight-search{
+  display: flex;
+  margin-top: 50px;
+  gap: 25px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  background: rgb(255, 255, 255,0.6);
+  box-shadow: 0 0 5px rgb(110, 146, 200);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+}
+.place{
+  text-align: left;
+  color: #496b9b;
+  font-weight: bold;
+}
+.place select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+}
+.place input,select{
+  margin-top: 18px;
+  font-size: 17px;
+  color: #2f5c9b;
+  font-weight: bold;
+  background-color: white;
+  border: 2px solid #2f5c9b;
+  border: none;
+  border-radius: 6px;
+  width: 120px;
+  height: 30px;
+}
+.place input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(35%) sepia(80%) saturate(1200%) hue-rotate(185deg);
+  cursor: pointer;
+}
+.book-btn{
+  margin-top: 23px;
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+  transition: all 0.3s ease;;
+}
+.book-btn:hover{
+  cursor: pointer;
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+{/*Registration*/}
+
+.register-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  margin-top: 100px;
+}
+.register{
+  width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgb(81, 112, 134);
+}
+.register h2{
+  font-weight: 900;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 35px;
+  color: rgb(49, 102, 180);
+}
+.register input{
+  padding: 10px;
+  margin-bottom: 17px;
+  background-color: rgb(105, 143, 193,0.5);
+  border: none;
+  border-radius: 7px;
+  width: 90%;
+  color: black;
+}
+.terms{
+  color: rgb(105, 143, 193);
+  margin-top: 7px;
+  text-align: center;
+}
+.terms input {
+  color: rgb(105, 143, 193);
+  width: auto;
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+.register-btn{
+  margin-top: 12px;
+  font-size: 17px;
+  padding: 6px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(49, 102, 180);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.register-btn:hover{
+  transform: translateY(-3px);
+  background-color: rgb(47, 78, 121);
+}
+
+{/*Login*/}
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  margin-top: 80px;
+}
+.login{
+  width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgb(81, 112, 134);
+}
+.login h2{
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: rgb(49, 102, 180);
+}
+.login h3{
+  margin-bottom: 8px;
+  color: rgb(49, 102, 180);
+}
+.login .para1{
+  color: rgb(105, 143, 193);
+  line-height: 18px;
+  margin-bottom: 25px;
+}
+.login input{
+  padding: 10px;
+  margin-bottom: 17px;
+  background-color: rgb(105, 143, 193,0.5);
+  border: none;
+  border-radius: 7px;
+  width: 90%;
+  color: black;
+}
+.login-btn{
+  margin-top: 10px;
+  font-size: 17px;
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(49, 102, 180);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.login-btn:hover{
+  transform: translateY(-3px);
+  background-color: rgb(47, 78, 121);
+}
+.login .para2{
+  color: rgb(49, 102, 180);
+  margin-bottom: 20px;
+}
+.login h4{
+  color: rgb(49, 102, 180);
+  margin-bottom: -10px;
+}
+
+{/*Destination*/}
+
+.destinations{
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.section-title h2{
+  text-align: left;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 45px;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.section-title p{
+  text-align: left;
+  color: rgb(105, 143, 193);
+  margin-left: 50px;
+  margin-top: -5px;
+  letter-spacing: 2px;
+}
+.destination-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+  margin-top: 40px;
+  gap: 20px;
+}
+.destination-card img{
+  border-radius: 18px;
+  transition: transform 0.4s ease;
+  cursor: zoom-in;
+}
+.destination-card img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.destination-info h3{
+  color: rgb(49, 102, 180);
+}
+.destination-info p,span{
+  color: rgb(105, 143, 193);
+  line-height: 25px;
+}
+.destination-info button{
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+.destination-info button:hover{
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+
+{/*Flights*/}
+.flight-results{
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+.flight-results h2{
+  text-align: left;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 45px;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.flight-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 15px;
+  margin-top: 60px;
+  background: linear-gradient(145deg, #ffffff, #e8f0fa);
+  box-shadow:
+    0 8px 20px rgba(31, 55, 82, 0.18),
+    0 2px 6px rgba(31, 55, 82, 0.08);
+  margin-left: 90px;
+  margin-right: 90px;
+  height: 110px;
+  border-radius: 15px;
+}
+.airline{
+  text-align: left;
+  line-height: 2px;
+}
+.airline h2{
+  font-size: 35px;
+  margin-left: -3px;
+  color: rgb(117, 160, 225);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.airline h3{
+  color: rgb(49, 102, 180);
+}
+.flight-card p{
+  color: rgb(105, 143, 193);
+}
+.select-btn{
+  background-color: rgb(68, 177, 64);
+  cursor: pointer;
+  border: none;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 7px;
+  font-size: 21px;
+  transition: 0.3s ease;
+}
+.select-btn:hover{
+  background-color: aliceblue;
+  border: 1px solid green;
+  color: rgb(68, 177, 64);
+}
+
+{/*Choose*/}
+.why-cloudwing{
+  align-items: center;
+  margin-top: 100px;
+}
+.choose-content .heading{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 45px;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.reason{
+  margin-top: 70px;
+}
+.reason-content-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 80px;
+}
+.reason-section-1{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgb(90, 108, 141);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  animation: floatCircle 3s ease-in-out infinite;
+}
+/* Floating animation */
+@keyframes floatCircle {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.reason-section-1 i{
+  font-size: 40px;
+  color: rgb(126, 170, 237);
+  margin-bottom: 10px;
+}
+.reason-section-1 h2{
+  color: rgb(49, 102, 180);
+  margin: 8px 0;
+}
+.reason-section-1 p{
+  color: rgb(105, 143, 193);
+  margin: 0;
+  line-height: 1.6;
+}
+.reason-content-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 60px;
+}
+.reason-section-2{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgb(90, 108, 141);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  animation: floatCircle 3s ease-in-out infinite;
+}
+.reason-section-2 i{
+  font-size: 40px;
+  color: rgb(126, 170, 237);
+  margin-bottom: 10px;
+}
+.reason-section-2 h2{
+  color: rgb(49, 102, 180);
+  margin: 8px 0;
+}
+.reason-section-2 p{
+  color: rgb(105, 143, 193);
+  margin: 0;
+  line-height: 1.6;
+}
+
+{/*Offer*/}
+.offer-section {
+  margin-top: 70px;
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.offer-content h2{
+  font-family: 'Dancing Script', cursive;
+  color: aliceblue;
+  font-size: 65px;
+  font-weight: bolder;
+  display: flex;
+  margin-top: 100px;
+  margin-left: 90px;
+}
+.offer-content h4{
+  color: rgb(25, 74, 139);
+  display: flex;
+  margin-left: 100px;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+}
+.offer-content p{
+  color: aliceblue;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 500px;
+  font-size: 23px;
+}
+.offer-btn{
+  margin-top: 40px;
+  margin-left: 150px;
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+.offer-btn:hover{
+  cursor: pointer;
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+
+{/*Booking*/}
+.booking-section{
+  margin-top: 100px;
+  align-items: center;
+}
+.booking-nav{
+  background-color: rgb(25, 74, 139);
+  height: 50px;
+}
+.booking-nav h2{
+  margin-left: 35px;
+  padding: 10px;
+  text-align: left;
+  font-size: 26px;
+}
+.selected-city {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    gap: 25px;
+    border: 1px solid gray;
+    padding: 15px;
+    background-color: rgb(218, 235, 249);
+}
+.selected-city h3 {
+    font-size: 27px;
+    color: rgb(105, 143, 193);
+    word-spacing: 15px;
+    margin: 0;
+}
+.selected-city p {
+    margin: 0;
+    color: rgb(25, 74, 139);
+}
+.refund-btn {
+    background-color: rgb(68, 177, 64);
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.refund-btn:hover{
+  background-color: rgb(241, 237, 237);
+  color: rgb(68, 177, 64);
+  border: 1px solid rgb(68, 177, 64);
+}
+.selected-airline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    gap: 25px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+.icon{
+  display: flex;
+  gap: 80px;
+}
+.icon img{
+  width: 100px;
+  align-items: center;
+  text-align: center;
+}
+.icon h2{
+  color: rgb(49, 102, 180);
+  align-items: center;
+  font-size: 40px;
+  margin-left: -100px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.selected-airline h4{
+  color: rgb(25, 74, 139);
+}
+.duration{
+  margin-top: -20px;
+}
+.selected-airline p{
+  color: rgb(25, 74, 139);
+}
+.note{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  background-color: rgb(218, 235, 249);
+  margin-left: 220px;
+  margin-right: 220px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(77, 155, 223);
+}
+.note button{
+  margin-left: -10px;
+  margin-right: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(25, 74, 139);
+  padding: 8px;
+  border-radius: 8px;
+}
+.Traveller-section{
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  margin-bottom: 40px;
+  padding: 20px;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+.Traveller-details h2{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 45px;
+  font-weight: bolder;
+}
+.contact{
+  margin-top: 50px;
+  align-items: center;
+  text-align: left;
+}
+.contact h3{
+  color: rgb(49, 102, 180);
+  text-align: left;
+  font-size: 25px;
+}
+.contact p{
+  margin-top: -10px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: rgb(25, 74, 139);
+}
+.contact label{
+  color: rgb(49, 102, 180);
+}
+.contact input{
+  width: 100%;
+  padding: 8px;
+  background-color: rgb(218, 235, 249);
+  border: none;
+  color: rgb(44, 44, 44);
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.passenger{
+  margin-top: 30px;
+  align-items: center;
+  text-align: left;
+}
+.passenger h3{
+  color: rgb(49, 102, 180);
+  text-align: left;
+  font-size: 25px;
+}
+.passenger label{
+  color: rgb(49, 102, 180);
+}
+.passenger input{
+  width: 100%;
+  padding: 8px;
+  background-color: rgb(218, 235, 249);
+  border: none;
+  color: rgb(44, 44, 44);
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.title-options input{
+  width: 20px;
+}
+.gender-options input{
+  width: 20px;
+}
+.meal h3{
+  color: rgb(49, 102, 180);
+  text-align: left;
+  font-size: 25px;
+}
+.meal select{
+  width: 150px;
+  display: flex;
+  background-color: rgb(49, 102, 180);
+  color: white;
+}
+.confirm-btn{
+  background-color: rgb(68, 177, 64);
+  font-size: 23px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border: none;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 15px;
+}
+.confirm-btn:hover{
+  background-color: aliceblue;
+  border: 1px solid green;
+  color: rgb(68, 177, 64);
+}
+
+{/*Works*/}
+.work-container{
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.work-section h2{
+  text-align: left;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 45px;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.work-content{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 80px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.work{
+  border: 1px solid rgb(105, 143, 193);
+  padding: 20px;
+  width: 270px;
+  box-shadow: 0 0 6px rgb(105, 143, 193);
+  border-radius: 7px;
+}
+.work h4{
+  font-size: 23px;
+  color: rgb(49, 102, 180);
+}
+.work p{
+  color: rgb(105, 143, 193);
+  font-size: 20px;
+}
+
+{/*Travel Adventure */}
+.travel-section{
+  margin-top: 100px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.travel h2{
+  text-align: left;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 45px;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.travel p{
+  text-align: left;
+  color: rgb(105, 143, 193);
+  margin-left: 50px;
+  margin-top: -5px;
+  letter-spacing: 2px;
+}
+.travel-content-1{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.travel-card-1 img{
+  border-radius: 13px;
+}
+.travel-card-1 h3{
+  color: rgb(49, 102, 180);
+}
+.travel-card-1 p{
+  color: rgb(105, 143, 193);
+}
+.travel-content-2{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.travel-card-2 img{
+  border-radius: 13px;
+}
+.travel-card-2 h3{
+  color: rgb(49, 102, 180);
+}
+.travel-card-2 p{
+  color: rgb(105, 143, 193);
+}
+
+{/*NewsLetter*/}
+.newsletter-section{
+  position: relative;
+  width: 80%;
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.newsletter-content h2{
+  margin-top: 35px;
+  text-align: left;
+  color: rgb(197, 129, 46);
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+  margin-left: 40px;
+}
+.newsletter-content p{
+  color: rgb(105, 143, 193);
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 110px;
+}
+.subscribe-box{
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+  margin-left: 50px;
+}
+.subscribe-box input{
+  font-size: 15px;
+  padding: 5px;
+  background-color: aliceblue;
+  border: none;
+  border: 1px solid gray;
+  color: black;
+}
+.subscribe-btn{
+  background-color: rgb(197, 129, 46);
+  border: none;
+  font-size: 18px;
+}
+.subscribe-btn:hover{
+  background-color: aliceblue;
+  color: rgb(197, 129, 46);
+  border: 1px solid rgb(197, 129, 46);
+  cursor: pointer;
+}
+
+{/*Footer*/}
+.footer-section {
+    margin-top: 100px;
+    background: rgb(27, 47, 78);
+    color: white;
+    padding: 50px 70px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer-about {
+    flex: 1.5;
+    min-width: 250px;
+    text-align: left;
+}
+
+.footer-about h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.footer-about h2 i {
+    font-size: 28px;
+    margin-left: 5px;
+}
+
+.footer-about p {
+    margin-top: 10px;
+    line-height: 1.7;
+    color: rgb(105, 143, 193);
+}
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.social-icons i {
+    margin: 0;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    background: white;
+    color: rgb(27, 47, 78);
+    transform: translateY(-4px);
+}
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.footer-links a {
+    color: #d8e1ee;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: rgb(105, 143, 193);
+    transform: translateX(5px);
+}
+.footer-links p {
+    color: #d8e1ee;
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links p i {
+    width: 20px;
+    color: white;
+}
+.footer-bottom {
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-bottom a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+{/*Popular Flights*/}
+.flightpage-results{
+  margin-top: 100px;
+}
+.flight-heading h2{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 55px;
+  font-weight: bolder;
+}
+.popular-des {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    row-gap: 80px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+.popularflight-container{
+  border: 1px solid rgb(153, 168, 235);
+  border-radius: 6px;
+  background-color: #d8e1ee;
+  box-shadow: 0 4px 7px rgb(232, 236, 255);
+  padding-left: 10px;
+  padding-right: 5px;
+  width: 350px;
+}
+.popularflight-place{
+  display: flex;
+}
+.popularflight-place h3{
+  color: rgb(49, 102, 180);
+}
+.popular-airline{
+  display: flex;
+  gap: 5px;
+}
+.popular-airline img{
+  margin-top: 5px;
+}
+.popular-airline h2{
+  color: #1e40af;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+.popular-date{
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.popular-date label{
+  color: rgb(105, 143, 193);
+}
+.popular-date input{
+  margin-left: 4px;
+  background-color: #1e40af;
+  font-size: 17px;
+  border: none;
+  padding: 2px;
+   border-radius: 5px;
+}
+.popular-time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 60px;
+  color: rgb(105, 143, 193);
+  font-weight: 500;
+}
+.popular-class{
+  margin-top: 15px;
+  word-spacing: 6px;
+}
+.popular-class label{
+  color: rgb(105, 143, 193);
+  letter-spacing: 1px;
+}
+.popular-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+.popular-button p{
+  color: #1e40af;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+.popular-button button{
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+    transition: all 0.3s ease;
+}
+.popular-button button:hover{
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+
+{/*Paris*/}
+.paris-section{
+  margin-top: 100px;
+}
+.paris-content{
+  text-align: left;
+  margin-left: 50px;
+}
+.paris-content h1{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 55px;
+  font-weight: bolder;
+}
+.paris-content p{
+  color: rgb(105, 143, 193);
+  margin-top: -10px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+.paris-about{
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 0 5px gray;
+  background-color: rgb(35, 63, 105);
+}
+.paris-about p{
+  margin: auto;
+  color: rgb(227, 227, 227);
+  text-align: left;
+  font-size: 22px;
+}
+.paris-visit{
+  margin-top: 100px;
+}
+.paris-visit h2{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 55px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 50px;
+}
+.visit-img img{
+  transition: transform 0.4s ease;
+  cursor: zoom-in;
+}
+.visit-img img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.visit-container-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 70px;
+}
+.visit p{
+  margin-top: 15px;
+  font-size: 23px;
+  color: rgb(49, 102, 180);
+}
+.visit-container-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 70px;
+}
+.paris-exp{
+  margin-top: 100px;
+  background-color: rgb(35, 63, 105);
+  height: 300px;
+}
+.paris-exp h2{
+  padding: 20px;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(170, 197, 237);
+  font-size: 55px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 50px;
+}
+.exp-details{
+  padding: 15px;
+  text-align: left;
+  color: rgb(215, 215, 215);
+}
+.exp-details h3{
+  line-height: 9px;
+  margin-left: 130px;
+}
+.explore-paris{
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.explore-paris h2{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 55px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 50px;
+}
+.explore-paris p{
+  color: rgb(105, 143, 193);
+  text-align: left;
+  margin-left: 70px;
+  font-size: 20px;
+}
+.paris-btn{
+  float: right;
+  margin-top: -100px;
+  margin-right: 200px;
+}
+.btn-paris {
+    background-color: white;
+    color: #153e85;
+    border: 1px solid #2f5c9b;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-paris:hover {
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+
+{/*Parisflight*/}
+.parisflight{
+  margin-top: 120px;
+}
+.parisflight-content h2{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 55px;
+  font-weight: bolder;
+}
+.parisflight-content p{
+  color: rgb(105, 143, 193);
+  letter-spacing: 2px;
+}
+.paris-des{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+.parisflight-container{
+  border: 1px solid rgb(153, 168, 235);
+  border-radius: 6px;
+  background-color: #d8e1ee;
+  box-shadow: 0 4px 7px rgb(232, 236, 255);
+  padding-left: 10px;
+  padding-right: 5px;
+  width: 350px;
+}
+.parisflight-place{
+  display: flex;
+}
+.parisflight-place h3{
+  color: rgb(49, 102, 180);
+}
+.paris-airline{
+  display: flex;
+  gap: 5px;
+}
+.paris-airline img{
+  margin-top: 5px;
+}
+.paris-airline h2{
+  color: #1e40af;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+.paris-date{
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.paris-date label{
+  color: rgb(105, 143, 193);
+}
+.paris-date input{
+  margin-left: 4px;
+  background-color: #1e40af;
+  font-size: 17px;
+  border: none;
+  padding: 2px;
+   border-radius: 5px;
+}
+.paris-time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 60px;
+  color: rgb(105, 143, 193);
+  font-weight: 500;
+}
+.paris-class{
+  margin-top: 15px;
+  word-spacing: 6px;
+}
+.paris-class label{
+  color: rgb(105, 143, 193);
+  letter-spacing: 1px;
+}
+.paris-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+.paris-button p{
+  color: #1e40af;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+.paris-button button{
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+.paris-button button:hover{
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
+
+{/*Destinations*/}
+.des-flight{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.desflight-content h2{
+  font-family: 'Dancing Script', cursive;
+  color: rgb(49, 102, 180);
+  font-size: 55px;
+  font-weight: bolder;
+}
+.desflight-content p{
+  color: rgb(105, 143, 193);
+  letter-spacing: 1px;
+}
+.destination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  row-gap: 90px;
+}
+.destination-container{
+  border: none;
+  background: linear-gradient(145deg, #ffffff, #e8f0fa);
+  box-shadow:
+    0 8px 20px rgba(31, 55, 82, 0.18),
+    0 2px 6px rgba(31, 55, 82, 0.08);
+  padding: 7px;
+  width: 300px;
+  height: 500px;
+  border-radius: 9px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+.destination-container:hover{
+  transform: translateY(-8px);
+}
+.des-img img{
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.destination-place h3{
+  color: rgb(49, 102, 180);
+}
+.destination-airline{
+  display: flex;
+  margin-left: 10px;
+  gap: 5px;
+}
+.destination-airline img{
+  margin-top: 3px;
+}
+.destination-airline h2{
+  color: #1e40af;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+.destination-date{
+  margin-top: 15px;
+}
+.destination-date label{
+  color: rgb(105, 143, 193);
+  letter-spacing: 1px;
+}
+.destination-date input{
+  margin-left: 4px;
+  background-color: #1e40af;
+  font-size: 17px;
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+}
+.destination-time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 60px;
+  color: rgb(105, 143, 193);
+  font-weight: 500;
+}
+.destination-class label{
+  color: rgb(105, 143, 193);
+  letter-spacing: 1px;
+}
+.destination-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+.destination-btn p{
+  color: #1e40af;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+.button-des{
+  background-color: white;
+  color: #153e85;
+  border: 1px solid #2f5c9b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+.button-des:hover{
+  background: linear-gradient(135deg, rgb(100, 143, 199), #1e40af);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 130, 246, 0.4);
+}
