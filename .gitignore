@@ -1,0 +1,20 @@
+
+# Frontend dependencies and build files
+Flight/node_modules/
+Flight/dist/
+
+# Backend build files
+flights/flights/target/
+
+# IDE files
+flights/.idea/
+flights/flights/.idea/
+
+# Protect database credentials
+flights/flights/src/main/resources/application.properties
+
+# Environment files
+.env
+.env.*
+!.env.example
+Flight-git-backup/
